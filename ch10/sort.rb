@@ -3,19 +3,21 @@ def sort some_array
 end
 
 def recursive_sort unsorted_array, sorted_array
-	while unsorted_array.length != 0
-		small = unsorted_array.pop
-		stillUnsorted = []
-		unsorted_array.each do |word|
-				if word < small
-					stillUnsorted.push small
-					small = word
-				elsif small < word
-					stillUnsorted.push word 	
-				end
-		sorted_array.push small		
-		end
-	end		
+	if unsorted_array.length == 0	
+		return sorted_array
+	end	
+	small = unsorted_array.pop
+	stillUnsorted = []
+	unsorted_array.each do |word|
+			if word < small
+				stillUnsorted.push small
+				small = word
+			elsif small < word
+				stillUnsorted.push word
+			end	
+	sorted_array.push small		
+	end
+	recursive_sort(stillUnsorted, sorted_array)
 end	
 
 words = []
