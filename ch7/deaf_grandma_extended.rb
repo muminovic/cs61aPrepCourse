@@ -11,5 +11,6 @@ while bye < 3
 			bye = 0		
 	end	
 if bye == 3
+	puts 'LEAVING SO SOON? BYE, SONNY!'
 	end
 end			
