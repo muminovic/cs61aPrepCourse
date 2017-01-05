@@ -25,7 +25,4 @@ while answer != ''
 	words.push answer
 	answer = gets.chomp
 end
-
-sort words
-puts words
-
+puts sort(words)
