@@ -5,19 +5,20 @@ end
 def recursive_sort unsorted_array, sorted_array
 	if unsorted_array.length == 0	
 		return sorted_array
-	end	
-	small = unsorted_array.pop
-	stillUnsorted = []
-	unsorted_array.each do |word|
+	else	
+		small = unsorted_array.pop
+		stillUnsorted = []
+		unsorted_array.each do |word|
 			if word < small
 				stillUnsorted.push small
 				small = word
 			elsif small < word
 				stillUnsorted.push word
 			end	
-	sorted_array.push small		
-	end
-	recursive_sort(stillUnsorted, sorted_array)
+		sorted_array.push small		
+		recursive_sort(stillUnsorted, sorted_array)
+		end
+	end		
 end	
 
 words = []
