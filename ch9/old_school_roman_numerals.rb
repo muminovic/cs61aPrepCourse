@@ -5,29 +5,8 @@ xs = (num % 50)/10
 ls = (num % 100)/50
 cs = (num % 500)/100
 ds = (num % 1000)/500
-ms = num/1000
-
-if num >= 1000
-	num = num % 1000
-end
-if num >= 500
-	num = num % 500
-end
-if num >= 100
-	num = num % 100
-end
-if num >= 50
-	num = num % 50
-end
-if num >= 10
-	num = num % 10
-end
-if num >= 5
-	num = num % 5
-end
-if num >= 1
-	num = num % 1	
-end		
+ms = num/1000	
+		
 puts (('I' * is) + ('V' * vs) + ('X' * xs) + ('L' * ls) + ('C' * cs) + ('D' * ds) + ('M' * ms)).reverse
 end
 
