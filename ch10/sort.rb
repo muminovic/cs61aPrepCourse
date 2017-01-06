@@ -15,9 +15,9 @@ def recursive_sort unsorted_array, sorted_array
 			elsif small < word
 				stillUnsorted.push word
 			end	
+		end	
 		sorted_array.push small		
-		recursive_sort(stillUnsorted, sorted_array)
-		end
+		return recursive_sort(stillUnsorted, sorted_array)
 	end		
 end	
 
