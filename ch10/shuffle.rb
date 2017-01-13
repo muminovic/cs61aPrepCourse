@@ -6,7 +6,7 @@ def shuffle array
 		shuffled.push(array[index])
 		array.delete_at(index)
 	end
-	puts shuffled
+	return shuffled
 end		
 
 array = ['1', '2', '3', '4']
