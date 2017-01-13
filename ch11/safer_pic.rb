@@ -18,7 +18,7 @@ pic_names.each do |name|
 		"#{batch_name}#{pic_number}.jpg" 
 	end
 
-if new_name.exist?
+if File.exist? new_name
 	print "This name is already taken. Are you sure you want to overwrite this file?"
 	reply = gets.chomp
 	if reply == yes
