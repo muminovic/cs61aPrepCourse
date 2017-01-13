@@ -10,7 +10,7 @@ def dictionary_sort unsorted_array, sorted_array
 		small = unsorted_array.pop
 		stillUnsorted = []
 		unsorted_array.each do |word|
-			if word.downcase < small.downcase 
+			if word.downcase <= small.downcase 
 				stillUnsorted.push small
 				small = word
 			elsif small.downcase < word.downcase 

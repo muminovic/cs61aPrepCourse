@@ -9,7 +9,7 @@ def recursive_sort unsorted_array, sorted_array
 		small = unsorted_array.pop
 		stillUnsorted = []
 		unsorted_array.each do |word|
-			if word < small
+			if word <= small
 				stillUnsorted.push small
 				small = word
 			elsif small < word
@@ -29,3 +29,5 @@ while answer != ''
 	answer = gets.chomp
 end
 puts sort(words)
+
+
